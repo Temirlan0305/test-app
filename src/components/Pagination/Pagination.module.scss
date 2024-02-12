@@ -1,0 +1,38 @@
+.root {
+    display: flex;
+    align-items: center;
+    li:not(:last-child) {
+        margin-right: 30px;
+    }
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #323b4c;
+            border: 1px solid #323b4c;
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.5s;
+                color: #fff;
+                background-color: #323b4c;
+            }
+        }
+    }
+    :global {
+        .selected {
+            a {
+                color: #fff;
+                background-color: #323b4c;
+            }
+        }
+        .disabled {
+            display: none;
+        }
+    }
+}
